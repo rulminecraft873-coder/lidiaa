@@ -4,7 +4,7 @@
    ============================================ */
 
 // Foto profil di section "About Me"
-const avatarPhoto = "https://cdn.nekohime.site/file/3h6eaifz.jpg"; // contoh: "https://i.imgur.com/xxxxxxx.jpg"
+const avatarPhoto = "https://cdn.nekohime.site/file/3h6eaifz.jpg"; // : "https://i.imgur.com/xxxxxxx.jpg"
 
 // Foto-foto untuk halaman gallery.html
 const galleryPhotos = [
