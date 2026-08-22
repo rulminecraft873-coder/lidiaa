@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeri Foto — Shapa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+
+<nav>
+  <a href="index.html" class="logo">Shapa</a>
+  <div class="nav-right">
+    <span id="navUser"></span>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" width="24" height="24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#about">Tentang Saya</a>
+  <a href="index.html#portfolio">Portfolio</a>
+  <a href="gallery.html" onclick="toggleMenu()">Galeri Foto</a>
+  <a href="index.html#contact">Kontak</a>
+</div>
+
+<section id="gallery">
+  <h2 class="section-title">Galeri Foto</h2>
+  <p class="eyebrow">✦ Kumpulan momen &amp; dokumentasi kegiatan ✦</p>
+
+  <div class="gallery-grid" id="galleryGrid"></div>
+
+  <div class="gallery-empty" id="galleryEmpty" style="display:none;">
+    <svg viewBox="0 0 24 24" fill="none" style="display:block;margin:0 auto;"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="m3 15 5-5 4 4 3-3 6 6" stroke="currentColor" stroke-width="1.5"/></svg>
+    Belum ada foto. Tinggal paste link foto di array <strong>galleryPhotos</strong>.
+    <code>js/photos.js → galleryPhotos = ["https://link-foto.jpg", ...]</code>
+  </div>
+
+  <a href="index.html" class="btn btn-outline">
+    <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Kembali ke Beranda
+  </a>
+</section>
+
+<footer>© 2026 Shapa™. Dibuat untuk Uji Kompetensi Keahlian TKJ.</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-close" onclick="closeLightbox()">✕</div>
+  <img id="lightboxImg" src="" alt="Preview foto" onclick="event.stopPropagation()">
+</div>
+
+<script src="js/photos.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
